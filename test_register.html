@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Test</title>
+</head>
+<body>
+    <h2>Registration Test</h2>
+    <form id="testForm">
+        <div>
+            <label>Full Name:</label>
+            <input type="text" id="full_name" value="Test User" required>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" id="email" value="test@example.com" required>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" id="password" value="password123" required>
+        </div>
+        <div>
+            <label>Confirm Password:</label>
+            <input type="password" id="confirm_password" value="password123" required>
+        </div>
+        <div>
+            <label>Role:</label>
+            <select id="role">
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
+            </select>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('full_name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const role = document.getElementById('role').value;
+            
+            console.log('Sending data:', {
+                full_name: fullName,
+                email: email,
+                password: password,
+                password_confirmation: confirmPassword,
+                role: role
+            });
+            
+            try {
+                const response = await fetch('/register.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        full_name: fullName,
+                        email: email,
+                        password: password,
+                        password_confirmation: confirmPassword,
+                        role: role
+                    })
+                });
+                
+                const data = await response.json();
+                console.log('Response:', data);
+                
+                document.getElementById('result').innerHTML = 
+                    '<h3>Response:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = 
+                    '<h3>Error:</h3><pre>' + error.message + '</pre>';
+            }
+        });
+    </script>
+</body>
+</html>

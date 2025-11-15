@@ -1,0 +1,342 @@
+/* Universal Dark Mode Styles for FixSense */
+/* Include this CSS file on all pages for consistent dark mode */
+
+/* Dark Mode CSS Variables */
+:root {
+    /* Light mode variables */
+    --primary-color: #1a56db;
+    --secondary-color: #ff6b35;
+    --dark-color: #2d3748;
+    --light-color: #f7fafc;
+    --gray-color: #e2e8f0;
+    --dark-gray: #718096;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Transition for smooth theme switching */
+    --transition-speed: 0.3s;
+}
+
+/* Smooth transitions for all elements */
+body {
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+* {
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    /* Override variables for dark mode */
+    --primary-color: #4f9cf9;
+    --secondary-color: #ff8c65;
+    --dark-color: #f1f5f9;
+    --light-color: #1e293b;
+    --gray-color: #334155;
+    --dark-gray: #94a3b8;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --card-hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    
+    background-color: #0f172a !important;
+    color: var(--dark-color) !important;
+}
+
+/* Header Dark Mode */
+.dark-mode header {
+    background-color: #1e293b !important;
+    border-bottom: 1px solid #334155;
+}
+
+.dark-mode .navbar {
+    background-color: #1e293b !important;
+}
+
+.dark-mode .logo {
+    color: var(--primary-color) !important;
+}
+
+.dark-mode .logo i {
+    color: var(--secondary-color) !important;
+}
+
+.dark-mode .nav-links a {
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .nav-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+.dark-mode .nav-links a::after {
+    background-color: var(--primary-color) !important;
+}
+
+/* Button Dark Mode */
+.dark-mode .btn {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.dark-mode .btn:hover {
+    background-color: #3b82f6 !important;
+}
+
+.dark-mode .btn-secondary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.dark-mode .btn-secondary:hover {
+    background-color: #e55a2b !important;
+}
+
+.dark-mode .btn-outline {
+    background-color: transparent !important;
+    border: 1px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.dark-mode .btn-outline:hover {
+    background-color: rgba(79, 156, 249, 0.1) !important;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Button in Dark Mode */
+body.dark-mode .dark-mode-btn {
+    background-color: #374151 !important;
+    color: #f9fafb !important;
+    border: 1px solid #4b5563 !important;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+    background-color: #4b5563 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Card Dark Mode */
+.dark-mode .note-card,
+.dark-mode .card {
+    background-color: #334155 !important;
+    border: 1px solid #475569;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .card-header {
+    background: linear-gradient(135deg, var(--primary-color), #3b82f6) !important;
+    color: white !important;
+}
+
+.dark-mode .card-body {
+    background-color: #334155 !important;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .card-body p {
+    color: var(--dark-gray) !important;
+}
+
+/* Main Content Dark Mode */
+.dark-mode main {
+    background-color: #0f172a !important;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .page-title {
+    color: var(--primary-color) !important;
+}
+
+.dark-mode .page-subtitle {
+    color: var(--dark-gray) !important;
+}
+
+/* Hero Section Dark Mode */
+.dark-mode .hero {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .hero h1,
+.dark-mode .hero p {
+    color: var(--dark-color) !important;
+}
+
+/* Search Bar Dark Mode */
+.dark-mode .search-bar {
+    background-color: #334155 !important;
+    border: 1px solid #475569 !important;
+}
+
+.dark-mode .search-bar input {
+    background-color: #334155 !important;
+    color: var(--dark-color) !important;
+    border: none !important;
+}
+
+.dark-mode .search-bar input::placeholder {
+    color: var(--dark-gray) !important;
+}
+
+.dark-mode .search-bar button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Footer Dark Mode */
+.dark-mode footer {
+    background-color: #1e293b !important;
+    color: var(--dark-color) !important;
+    border-top: 1px solid #334155;
+}
+
+.dark-mode .footer-column h3 {
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .footer-column h3::after {
+    background-color: var(--secondary-color) !important;
+}
+
+.dark-mode .footer-column ul li a {
+    color: var(--dark-gray) !important;
+}
+
+.dark-mode .footer-column ul li a:hover {
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .footer-bottom {
+    color: var(--dark-gray) !important;
+    border-top: 1px solid #334155 !important;
+}
+
+/* Social Links Dark Mode */
+.dark-mode .social-links a {
+    background-color: #475569 !important;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .social-links a:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+/* PDF Viewer Dark Mode */
+.dark-mode #pdf-viewer-section {
+    background-color: #334155 !important;
+    border: 1px solid #475569;
+}
+
+.dark-mode #pdf-viewer-header {
+    border-bottom: 1px solid #475569 !important;
+}
+
+.dark-mode #pdf-title {
+    color: var(--primary-color) !important;
+}
+
+.dark-mode #pdf-viewer {
+    border: 1px solid #475569 !important;
+}
+
+/* Note Meta Dark Mode */
+.dark-mode .note-meta {
+    color: var(--dark-gray) !important;
+}
+
+/* Input Fields Dark Mode */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background-color: #334155 !important;
+    color: var(--dark-color) !important;
+    border: 1px solid #475569 !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: var(--dark-gray) !important;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px rgba(79, 156, 249, 0.2) !important;
+}
+
+/* Modal Dark Mode */
+.dark-mode .modal {
+    background-color: #334155 !important;
+    color: var(--dark-color) !important;
+    border: 1px solid #475569;
+}
+
+.dark-mode .modal-header {
+    background-color: #475569 !important;
+    border-bottom: 1px solid #64748b;
+}
+
+.dark-mode .modal-body {
+    background-color: #334155 !important;
+}
+
+/* Table Dark Mode */
+.dark-mode table {
+    background-color: #334155 !important;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode th {
+    background-color: #475569 !important;
+    color: var(--dark-color) !important;
+    border-bottom: 1px solid #64748b;
+}
+
+.dark-mode td {
+    border-bottom: 1px solid #475569;
+    color: var(--dark-color) !important;
+}
+
+.dark-mode tr:hover {
+    background-color: #475569 !important;
+}
+
+/* Scrollbar Dark Mode */
+.dark-mode ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
