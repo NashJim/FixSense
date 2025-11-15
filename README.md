@@ -5,7 +5,7 @@
 FixSense helps TVET automotive students develop real-world diagnostic reasoning through scenario-based simulations, real-time feedback, and progress tracking — validated via usability testing with lecturers and students.
 
 ## 💻 Tech Stack
-- **Frontend**: HTML5, CSS3, JavaScript  
+- **Frontend**: HTML, CSS, JavaScript  
 - **Backend**: PHP  
 - **Database**: MySQL  
 - **Tools**: Visual Studio Code, Adobe Illustrator (UI mockups)
